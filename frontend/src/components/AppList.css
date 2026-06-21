@@ -1,0 +1,41 @@
+.app-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .app-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app-list__error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--danger-dim);
+  border: 1px solid rgba(255, 84, 112, 0.35);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.app-list__error-text {
+  color: var(--danger);
+  font-size: 14px;
+}
+
+.app-list__retry {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.app-list__retry:hover {
+  background: rgba(255, 84, 112, 0.12);
+}

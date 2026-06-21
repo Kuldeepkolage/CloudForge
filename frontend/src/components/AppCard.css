@@ -1,0 +1,118 @@
+.app-card {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.app-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.app-card__rail {
+  width: 4px;
+  flex-shrink: 0;
+  background: var(--neutral);
+}
+
+.app-card__rail--pending { background: var(--warning); }
+.app-card__rail--building,
+.app-card__rail--deploying { background: var(--info); }
+.app-card__rail--running,
+.app-card__rail--deployed,
+.app-card__rail--active { background: var(--success); }
+.app-card__rail--failed,
+.app-card__rail--error { background: var(--danger); }
+.app-card__rail--stopped { background: var(--neutral); }
+
+.app-card__rail--pulse {
+  animation: rail-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes rail-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.app-card__body {
+  flex: 1;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.app-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.app-card__name {
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.app-card__description {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.app-card__repo {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--info);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-card__repo:hover {
+  text-decoration: underline;
+}
+
+.app-card__footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-card__date {
+  font-size: 12px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+}
+
+.app-card__delete {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  transition: all 0.15s ease;
+}
+
+.app-card__delete:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.app-card__delete--confirm {
+  background: var(--danger-dim);
+  border-color: var(--danger);
+  color: var(--danger);
+}
