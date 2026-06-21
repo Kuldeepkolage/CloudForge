@@ -1,0 +1,28 @@
+# Node Modules
+node_modules/
+
+# Environment Variables
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Build Files
+dist/
+build/
+
+# Coverage
+coverage/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Kubernetes Secrets
+secrets.yaml
