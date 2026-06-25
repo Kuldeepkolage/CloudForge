@@ -1,170 +1,99 @@
-# CloudForge
+## Development Roadmap
 
-CloudForge is a cloud-native application deployment platform designed to demonstrate modern DevOps practices through a complete end-to-end infrastructure lifecycle.
+CloudForge will be developed incrementally following a production-style DevOps lifecycle.
 
-Inspired by platforms such as Heroku, Railway, and Render, CloudForge enables application management while showcasing production-oriented deployment, automation, monitoring, security, and GitOps workflows.
+### Phase 1 — Application Development
 
----
+* React Frontend
+* Node.js + Express Backend
+* MongoDB Database
+* JWT Authentication
+* Project Management APIs
 
-## Overview
+### Phase 2 — Containerization
 
-CloudForge serves as a practical implementation of a modern DevOps ecosystem.
+* Docker
+* Multi-stage Dockerfiles
+* Docker Compose
+* Environment Configuration
 
-The project focuses on building, deploying, managing, securing, and monitoring containerized applications using industry-standard tools and workflows.
+### Phase 3 — Kubernetes
 
-The objective is to provide a realistic environment for implementing DevOps concepts that are commonly used in production systems.
+* Deployments
+* Services
+* ConfigMaps
+* Secrets
+* Persistent Volumes
 
----
+### Phase 4 — CI/CD
 
-## Key Capabilities
+* Jenkins Pipelines
+* Automated Build
+* Docker Image Publishing
+* Kubernetes Deployment
+* Deployment Verification
 
-- Application Management
-- Containerized Services
-- Infrastructure as Code
-- Automated CI/CD Pipelines
-- Kubernetes-Based Deployments
-- Security Scanning
-- Continuous Monitoring
-- Metrics Collection
-- Centralized Visualization
-- GitOps-Based Delivery
+### Phase 5 — Advanced Kubernetes
 
----
+* Ingress Controller
+* Horizontal Pod Autoscaler
+* Rolling Updates
+* Rollbacks
 
-## Technology Stack
+### Phase 6 — Security
 
-### Frontend
+* SonarQube
+* Trivy
+* Secure Secret Management
 
-- React
-- Vite
+### Phase 7 — Monitoring & Observability
 
-### Backend
+* Prometheus
+* Grafana
+* Metrics Collection
+* Application Monitoring
 
-- Node.js
-- Express.js
+### Phase 8 — GitOps
 
-### Database
-
-- MongoDB
-- Mongoose
-
-### Containerization
-
-- Docker
-- Docker Compose
-
-### Orchestration
-
-- Kubernetes
-
-### Continuous Integration & Deployment
-
-- Jenkins
-
-### Security
-
-- SonarQube
-- Trivy
-
-### Monitoring & Observability
-
-- Prometheus
-- Grafana
-
-### GitOps
-
-- ArgoCD
+* ArgoCD
+* GitOps Workflows
+* Automated Synchronization
 
 ---
 
-## Architecture
+## Repository Structure
 
-```text
-Frontend
-    │
-    ▼
-Backend API
-    │
-    ▼
-MongoDB
-
-────────────────────────
-
-Source Code
-    │
-    ▼
-GitHub
-    │
-    ▼
-Jenkins CI/CD
-    │
-    ▼
-Docker Images
-    │
-    ▼
-Kubernetes Cluster
-    │
-    ▼
-Application Services
-
-────────────────────────
-
-Prometheus
-    │
-    ▼
-Grafana
-
-────────────────────────
-
-SonarQube
-Trivy
-ArgoCD
+```
+CloudForge
+│
+├── frontend/
+├── backend/
+├── docker/
+├── k8s/
+├── jenkins/
+├── monitoring/
+├── docs/
+└── README.md
 ```
 
-## DevOps Practices Demonstrated
+---
 
-- Containerization
-- Multi-Container Architectures
-- Service Networking
-- Persistent Storage Management
-- Continuous Integration
-- Continuous Deployment
-- Infrastructure Automation
-- Kubernetes Workloads
-- Configuration Management
-- Secret Management
-- Application Monitoring
-- Metrics Collection
-- Security Analysis
-- Vulnerability Scanning
-- GitOps Workflows
-- Production-Oriented Deployment Strategies
+## Future Enhancements
+
+* Multi-environment deployments (Development, Staging, Production)
+* Helm Charts
+* Kubernetes Horizontal Auto Scaling
+* Canary & Blue-Green Deployments
+* Centralized Logging
+* GitHub Actions Integration
+* Automated Rollback Strategy
+* Infrastructure as Code
+* Cloud Deployment (AWS/Azure/GCP)
 
 ---
 
-## Learning Objectives
+## Project Status
 
-CloudForge demonstrates practical implementation of:
+> 🚧 **CloudForge is currently under active development.**
 
-- Docker
-- Kubernetes
-- CI/CD Pipelines
-- Infrastructure Management
-- Application Deployment
-- Monitoring and Observability
-- Security Automation
-- GitOps Methodologies
-
----
-
-## Project Vision
-
-CloudForge represents a complete DevOps learning and implementation platform that brings together development, automation, deployment, security, monitoring, and operations into a single cloud-native ecosystem.
-
----
-
-## Author
-
-Kuldeep Kolage
-
-DevOps Engineer | Cloud & Infrastructure Enthusiast
+The project will evolve incrementally, with each milestone introducing new DevOps concepts and production-grade practices while maintaining a fully functional application throughout the development lifecycle.
